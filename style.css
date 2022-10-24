@@ -1,0 +1,193 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Droid Sans Mono", sans-serif;
+}
+
+header nav {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: orangered;
+    text-shadow: 0 1px 1px #777;
+}
+
+.list ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.list ul a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: orangered;
+    font-weight: bold;
+}
+
+.list ul a:hover {
+    color: green;
+}
+
+#collapse {
+    display: none;
+    color: orangered;
+    cursor: pointer;
+}
+
+.box {
+    background-color: antiquewhite;
+    padding: 5px;
+    display: none;
+}
+
+.box ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+}
+
+.box ul a {
+    text-decoration: none;
+    color: #000;
+    margin: 3px auto;
+    font-weight: bold;
+}
+
+.box ul a:hover {
+    color: green;
+}
+
+main {
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+main h2 {
+    margin: 0 auto 30px auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.project-box {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.project {
+    background-color: antiquewhite;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.project-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project h3 {
+    color: orangered;
+    margin-bottom: 20px;
+    text-shadow: 0 1px 1px #777;
+}
+
+.project p {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.project a {
+    text-decoration: none;
+    font-weight: bold;
+    color: orangered;
+    margin-right: 20px;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 10px;
+    background-color: antiquewhite;
+}
+
+footer h4 {
+    text-align: center;
+}
+
+/* Media Query - Tablets */
+@media (max-width: 1000px) {
+    main {
+        max-width: 700px;
+    }
+    main h2 {
+        padding: 0 20px;
+    }
+    .project-box {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+    .project h3 {
+        font-size: 1.5em;
+    }
+    footer {
+        position: relative;
+    }
+}
+
+/* Media Query - Smart Phones */
+@media (max-width: 600px) {
+    .list ul a {
+        display: none;
+    }
+    #collapse {
+        display: block;
+    }
+    .project {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+    .project-image {
+        height: 200px;
+        margin: 0 auto;
+    }
+    .project-info {
+        text-align: center;
+    }
+    .project a {
+        margin: 0 10px;
+    }
+}
+
+/* Media Query - Keypad Phones */
+@media (max-width: 300px) {
+    .logo {
+        font-size: 14px;
+    }
+    main h2 {
+        font-size: 16px;
+    }
+    .project a {
+        display: block;
+    }
+    footer h4 {
+        font-size: 12px;
+    }
+}
