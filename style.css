@@ -22,6 +22,10 @@ header nav {
     text-shadow: 0 1px 1px #777;
 }
 
+.logo a:hover {
+    color: #000;
+}
+
 .list ul {
     display: flex;
     list-style-type: none;
@@ -44,6 +48,10 @@ header nav {
     cursor: pointer;
 }
 
+#collapse:hover {
+    color: #000;
+}
+
 .box {
     background-color: antiquewhite;
     padding: 5px;
@@ -59,7 +67,7 @@ header nav {
 
 .box ul a {
     text-decoration: none;
-    color: #000;
+    color: orangered;
     margin: 3px auto;
     font-weight: bold;
 }
@@ -94,12 +102,13 @@ main h2 {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
     align-items: center;
+    
 }
 
 .project-image img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    box-shadow: 0 3px 10px rgba(100, 100, 100, 0.5);
 }
 
 .project h3 {
@@ -159,6 +168,9 @@ footer h4 {
     }
     #collapse {
         display: block;
+    }
+    main h2 {
+        font-size: 20px;
     }
     .project {
         grid-template-columns: 1fr;
